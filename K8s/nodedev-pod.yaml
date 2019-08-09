@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodedev-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodedev-pod
+  template:
+    metadata:
+      labels:
+        app: nodedev-pod
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      imagePullSecrets:
+      - name: devsecret0
+      containers:
+      - name: nodedev-pod
+        image: acrDevelopment.azurecr.io/nodedev-pod:latest
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 256Mi
+        ports:
+        - containerPort: 3000
+          name: nodedev-pod
+
+
+

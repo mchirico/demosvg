@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}. This is for testing POST, GET, CORS etc.
+  a(href='https://github.com/mchirico/demosvg') Demosvg
+
+
+  -
+    var list = ["POST", "GET",]
+  each item in list
+    li= item

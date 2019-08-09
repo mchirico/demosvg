@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .ball {
+            transition: all 250ms;
+        }
+
+        .ball:hover {
+            transform: translateX(-25px) scale(1.2);
+
+        }
+
+    </style>
+
+</head>
+<body>
+<h1>SVG start</h1>
+<div id="vis">
+</div>
+<hr>
+<svg width="850" height="500">
+    <rect class="ball" x="200" y="50" width="30" height="50" stroke-width="2" fill="#00be00" stroke="#000000"></rect>
+    <circle class="ball" r="80" cx="200" cy="200" fill="#0000be" stroke-width="5" stroke="#000000"></circle>
+</svg>
+
+
+<script src="https://d3js.org/d3.v5.js"></script>
+
+<script>
+
+    var vis = d3.select("#vis");
+
+    var p = vis.append("p")
+        .text("Hello World");
+
+    p.style("font-size","30px")
+
+</script>
+
+</body>
+</html>
