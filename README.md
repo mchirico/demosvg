@@ -9,7 +9,7 @@
 
 # demosvg
 
-<img src="https://user-images.githubusercontent.com/755710/64380986-33413680-d000-11e9-921b-5f83fb194be5.png" alt="Smiley face" width="620">
+<img src="https://user-images.githubusercontent.com/755710/64380986-33413680-d000-11e9-921b-5f83fb194be5.png" alt="Smiley face" width="520">
 
 
 
